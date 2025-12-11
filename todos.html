@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <main id="content">
+        <h1>Your Todos</h1>
+        <div id="controls">
+            <button id="logout-btn">Logout</button>
+        </div>
+        <section id="todos-container"></section>
+    </main>
+    <div id="footer"></div>
+
+    <script type="module">
+        import { Navbar } from '../components/navbar.js'; import { Footer } from '../components/footer.js'; import { requireAuth, logout } from '../scripts/auth.js'; import { initTodos } from '../scripts/todos.js'; document.getElementById('navbar').innerHTML
+        = Navbar(); document.getElementById('footer').innerHTML = Footer(); // Block unauthenticated access requireAuth(); // Initialize todos fetch + render initTodos(); document.getElementById('logout-btn').addEventListener('click', () => { logout();
+        window.location.href = './login.html'; });
+    </script>
+</body>
+
+</html>
