@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <main id="content">
+        <h1>Welcome</h1>
+        <p>This is a modular JavaScript app.</p>
+    </main>
+    <div id="footer"></div>
+
+    <script type="module">
+        import { Navbar } from '../components/navbar.js'; import { Footer } from '../components/footer.js'; document.getElementById('navbar').innerHTML = Navbar(); document.getElementById('footer').innerHTML = Footer();
+    </script>
+</body>
+
+</html>
