@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <main id="content">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label>Email <input type="email" name="email" required /></label>
+            <label>Password <input type="password" name="password" required /></label>
+            <button type="submit">Login</button>
+        </form>
+        <p>New user? <a href="./signup.html">Signup</a></p>
+    </main>
+    <div id="footer"></div>
+
+    <script type="module">
+        import { Navbar } from '../components/navbar.js'; import { Footer } from '../components/footer.js'; import { handleLogin } from '../scripts/auth.js'; document.getElementById('navbar').innerHTML = Navbar(); document.getElementById('footer').innerHTML =
+        Footer(); document.getElementById('login-form').addEventListener('submit', handleLogin);
+    </script>
+</body>
+
+</html>
